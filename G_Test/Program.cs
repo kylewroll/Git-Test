@@ -14,9 +14,17 @@ namespace G_Test
 
             int tries = 1;
 
-            Console.WriteLine("I am thinking of a number between 0 and 100");
+            Console.WriteLine("Please enter a starting number:");
 
-            int answer = num.Next(101); //.Next(101) taken from MSDN
+            int start = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Please enter an ending number:");
+
+            int end = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("I am thinking of a number between " + start + " and " + end);
+
+            int answer = num.Next(start, end); //.Next(start, end) taken from MSDN
 
 
 
